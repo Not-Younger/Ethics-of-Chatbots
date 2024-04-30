@@ -14,8 +14,8 @@ nav {
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
-
 
 .left {
   border-left: 1px solid black;
@@ -44,7 +44,7 @@ nav {
   font-size: 1rem;
   color: #fff;
   border: none;
-  border-radius: 50px;
+  border-radius: 5px;
   width: max-content;
   cursor: pointer;
 }
@@ -87,6 +87,7 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
+  position: relative;
 }
 
 h2 {
@@ -117,6 +118,122 @@ h2 {
   cursor: pointer; 
 }
 
+#arrow1 {
+  background-color: #2E81FF;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -29px;
+  top: 50px;
+}
+
+#general-section {
+  padding: 2rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#general-upper {
+  display: flex;
+}
+
+#general-upper-left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.definition {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 60%;
+  padding: 1rem;
+}
+
+.definition h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.definition h4 {
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.definition-source {
+  display: flex;
+  justify-content: right;
+}
+
+.definition-source p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.358);
+}
+
+#general-upper-right {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-radius: 5px;
+  height: 250px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+#customer-section {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+#customer-section h2 {
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+#customer-contents {
+  display: flex;
+  padding: 0 2rem;
+}
+
+.contents-img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.contents-links {
+  flex: 3;
+  border-left: 1px solid black;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 2rem;
+}
+
+.links-container h3 {
+  margin: 0;
+}
+
+.contents-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
 @media (max-width: 500px) {
   h1 {
     font-size: 3.5rem;
@@ -127,6 +244,10 @@ h2 {
   }
 }
 @media (max-width: 700px) {
+  #arrow1 {
+    top: -29px;
+    left: auto;
+  }
   #intro-section {
     flex-direction: column;
     padding: 0;
@@ -138,5 +259,18 @@ h2 {
   }
   .introduction p {
     max-width: 100%;
+  }
+  .definition {
+    width: 70%;
+  }
+  #general-upper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #customer-contents {
+    flex-direction: column-reverse;
+  }
+  .contents-links {
+    border-left: 0;
   }
 }
