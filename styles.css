@@ -277,7 +277,11 @@ ol li {
 
 .information {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+}
+
+.info {
   border-bottom: 1px solid black;
 }
 
@@ -305,6 +309,12 @@ ol li {
 .info-3 {
   padding: 2rem;
   flex: 1;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 500px) {
@@ -356,5 +366,8 @@ ol li {
   .arrow2 {
     bottom: -29px;
     right: 43%;
+  }
+  .img-lg {
+    height: 200px;
   }
 }
