@@ -39,6 +39,37 @@ Q1D.addEventListener('click', () => {
   Q1D.style.backgroundColor = 'red';
 });
 
+// Question 2
+const questionContainerQ2 = document.getElementById('question-container-q2');
+const Q2A = document.getElementById('q2a');
+const Q2B = document.getElementById('q2b');
+const Q2C = document.getElementById('q2c');
+const Q2D = document.getElementById('q2d');
+
+function resetButtonColorsQ2() {
+  Q2A.style.backgroundColor = 'black';
+  Q2B.style.backgroundColor = 'black';
+  Q2C.style.backgroundColor = 'black';
+  Q2D.style.backgroundColor = 'black';
+}
+
+Q2A.addEventListener('click', () => {
+  resetButtonColorsQ2();
+  Q2A.style.backgroundColor = 'red';
+});
+Q2B.addEventListener('click', () => {
+  resetButtonColorsQ2(); 
+  Q2B.style.backgroundColor = 'red';
+});
+Q2C.addEventListener('click', () => {
+  resetButtonColorsQ2();
+  Q2C.style.backgroundColor = 'green';
+});
+Q2D.addEventListener('click', () => {
+  resetButtonColorsQ2();
+  Q2D.style.backgroundColor = 'red';
+});
+
 
 userButton.style.backgroundColor = 'grey';
 customerContent.style.display = 'block';
