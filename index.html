@@ -325,7 +325,23 @@
   <section class="chatbot-section">
     <div id="arrow5"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
     <div class="chatbot-container">
-      David put the chatbot here
+      <div class="chatbot">
+        <div class="chatbot-header">
+          <p>Chatbot</p>
+        </div>
+        <div class="chatbot-body">
+          <div class="chatbot-messages">
+            <div class="chatbot-message">
+              <p>Hi! I'm a chatbot. How can I help you today?</p>
+              <span id="chatbot-response"></span>
+            </div>
+          </div>
+          <div class="chatbot-input">
+            <input id="user-message" type="text" placeholder="Type a message...">
+            <button id="chatbot-send" onclick=fetchChatbotResponse()>Send</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Footer -->

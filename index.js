@@ -31,3 +31,14 @@ function showLawMakerContent() {
   document.getElementById('business-content').style.display = 'none';
   document.getElementById('law-maker-content').style.display = 'block';
 };
+
+function fetchChatbotResponse() {
+  const userMessage = document.getElementById('user-message').value;
+  if (userMessage === '') {
+    alert('Please enter a message');
+    return;
+  }
+  document.getElementById('user-message').value = '';
+  const chatbotResponse = 'Chatbot response to "' + userMessage + '"';
+  document.getElementById('chatbot-response').innerHTML = chatbotResponse;
+}
