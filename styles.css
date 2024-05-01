@@ -300,6 +300,7 @@ ol li {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 0;
 }
 
 .information-2 {
@@ -381,6 +382,26 @@ ol li {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+
+.chatbot-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-top: 1px solid black;
+}
+
+footer p {
+  margin: 0;
 }
 
 @media (max-width: 500px) {
