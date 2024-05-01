@@ -381,13 +381,26 @@ ol li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem;
+  position: relative;
 }
 
 .chatbot-container {
   border: 1px solid black;
   border-radius: 5px;
   padding: 2rem;
+}
+
+#arrow5 {
+  background-color: #2E81FF;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -29px;
 }
 
 footer {
