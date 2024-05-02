@@ -32,6 +32,15 @@ function showLawMakerContent() {
   document.getElementById('law-maker-content').style.display = 'block';
 };
 
+var session = {
+  messages: [
+    {
+      role: 'system',
+      content: 'You are a customer service representative on an eCommerce website follow standard company policies and guidelines.'
+    }
+  ]
+};
+
 function fetchChatbotResponse() {
   const userMessage = document.getElementById('user-message').value;
   if (userMessage === '') {
@@ -44,6 +53,10 @@ function fetchChatbotResponse() {
   userSpan.className = 'user-response';
   userSpan.textContent = userMessage;
   chatbotBody.appendChild(userSpan);
+  session.messages.push({
+    role: 'user',
+    content: userMessage
+  });
   fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -52,26 +65,18 @@ function fetchChatbotResponse() {
     },
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are a helpful assistant.'
-        },
-        {
-          role: 'user',
-          content: userMessage
-        }
-      ]
+      messages: session.messages
     })
   })
     .then(response => response.json())
     .then(data => {
       const chatbotResponse = data.choices[0].message.content;
-  
-      // Create new span for chatbot response
+      
+      session.messages.push(data.choices[0].message);
       var chatbotSpan = document.createElement('span');
-      console.log(chatbotResponse);
-      chatbotSpan.textContent = chatbotResponse; // Assuming chatbotResponse is the variable holding the response from the chatbot
+      chatbotSpan.className = 'chatbot-response';
+      console.log(session.messages);
+      chatbotSpan.textContent = chatbotResponse;
       chatbotBody.appendChild(chatbotSpan);
     })
     .catch(error => {
