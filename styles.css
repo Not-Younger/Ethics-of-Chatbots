@@ -414,14 +414,27 @@ ol li {
 }
 
 .user-response {
+  background-color: #2E81FF;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 15px;
   align-self: flex-end;
+}
+
+.chatbot-response {
+  background-color: lightgrey;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 15px;
+  align-self: flex-start;
 }
 
 .input-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: .1rem;
+  padding-top: 2rem;
+  gap: .3rem;
   width: 80%;
 }
 
@@ -441,6 +454,7 @@ ol li {
   border-radius: 5px;
   cursor: pointer; 
 }
+
 
 #arrow5 {
   background-color: #2E81FF;
