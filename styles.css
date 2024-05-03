@@ -386,10 +386,75 @@ ol li {
 }
 
 .chatbot-container {
+  width: 60%;
   border: 1px solid black;
   border-radius: 5px;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
+
+.chatbot-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.chatbot-messages {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.user-response {
+  background-color: #2E81FF;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 15px;
+  align-self: flex-end;
+}
+
+.chatbot-response {
+  background-color: lightgrey;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 15px;
+  align-self: flex-start;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
+  gap: .3rem;
+  width: 80%;
+}
+
+#user-message {
+  width: 80%;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#chatbot-button {
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
 
 #arrow5 {
   background-color: #2E81FF;
