@@ -57,26 +57,6 @@
     </div>
   </section>
 
-  <section class="multiple-choice">
-    <div id="q1" class="question-answer-container">
-      <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
-      <button id="q1a">A. This is the right answer</button>
-      <button id="q1b">B. This is the wrong answer</button>
-      <button id="q1c">C. This is the wrong answer</button>
-      <button id="q1d">D. This is the wrong answer</button>
-    </div>
-  </section>
-
-  <section class="multiple-choice">
-    <div id="q2" class="question-answer-container">
-      <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
-      <button id="q2a">A. This is the wrong answer</button>
-      <button id="q2b">B. This is the wrong answer</button>
-      <button id="q2c">C. This is the right answer</button>
-      <button id="q2d">D. This is the wrong answer</button>
-    </div>
-  </section>
-
   <!-- Customer Section -->
   <div id="customer-content">
   <!-- Section 1 -->
@@ -128,6 +108,16 @@
         <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
       </div>
     </section>
+    <!-- First multiple choice -->
+    <section class="multiple-choice">
+      <div id="q1" class="question-answer-container">
+        <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
+        <button id="q1a" class="multiple-choice-button" onclick="rightAnswer('q1', 'q1a', 'right')">A. This is the right answer</button>
+        <button id="q1b" class="multiple-choice-button" onclick="wrongAnswer('q1', 'q1b')">B. This is the wrong answer</button>
+        <button id="q1c" class="multiple-choice-button" onclick="wrongAnswer('q1', 'q1c')">C. This is the wrong answer</button>
+        <button id="q1d" class="multiple-choice-button" onclick="wrongAnswer('q1', 'q1d')">D. This is the wrong answer</button>
+      </div>
+    </section>
     <!-- Section 3 -->
     <section class="customer-title">
       <h2>Potential Privacy Concerns with Chatbots</h2>
@@ -162,180 +152,230 @@
         </div>
       </div>
     </section>
+    <!-- Second multiple choice -->
+    <section class="multiple-choice">
+      <div id="q2" class="question-answer-container">
+        <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
+        <button id="q2a">A. This is the wrong answer</button>
+        <button id="q2b">B. This is the wrong answer</button>
+        <button id="q2c">C. This is the right answer</button>
+        <button id="q2d">D. This is the wrong answer</button>
+      </div>
+    </section>
   </div>
 
   <!-- Business Section -->
   <div id="business-content">
     <!-- Section 1 -->
-      <section class="customer-title">
-        <h2>So you’re a business who wants to implement a chatbot...</h2>
-      </section>
-      <section id="customer-contents">
-        <div class="contents-img">
-          <img src="./customer.png" alt="picture of customer">
+    <section class="customer-title">
+      <h2>So you’re a business who wants to implement a chatbot...</h2>
+    </section>
+    <section id="customer-contents">
+      <div class="contents-img">
+        <img src="./customer.png" alt="picture of customer">
+      </div>
+      <div class="contents-links">
+        <div id="arrow2"><i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
+        <div class="links-container">
+          <h3 class="contents-title">Here's what well talk about:</h3>
+          <ol>
+            <li><a class="link" href="">Part 1</a></li>
+            <li><a class="link" href="">Part 2</a></li>
+            <li><a class="link" href="">Part 3</a></li>
+            <li><a class="link" href="">Part 4</a></li>
+            <li><a class="link" href="">Part 5</a></li>
+          </ol>
+        </div>    
+      </div>
+    </section>
+    <!-- Section 2 -->
+    <section class="customer-title">
+      <h2>How users feel about their experiences interacting with chatbots</h2>
+    </section>
+    <section class="information">
+      <div class="info-1 info">
+        <div class="img-container">
+          <img class="img-lg" src="./chatbot1.jpeg" alt="person and chatbot facing each other">
         </div>
-        <div class="contents-links">
-          <div id="arrow2"><i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
-          <div class="links-container">
-            <h3 class="contents-title">Here's what well talk about:</h3>
-            <ol>
-              <li><a class="link" href="">Part 1</a></li>
-              <li><a class="link" href="">Part 2</a></li>
-              <li><a class="link" href="">Part 3</a></li>
-              <li><a class="link" href="">Part 4</a></li>
-              <li><a class="link" href="">Part 5</a></li>
-            </ol>
-          </div>    
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
+      </div>
+      <div class="info-2 info">
+        <h3 style="margin-top: 0;">People enjoy using chatbots for simple requests</h3>
+        <p style="margin-bottom: 0;">Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
+        <div class="img-container" style="padding-top: 2rem;">
+          <img class="img-lg" src="./chatbot2.jpeg" alt="chatbot with lightbulb">
         </div>
-      </section>
-      <!-- Section 2 -->
-      <section class="customer-title">
-        <h2>How users feel about their experiences interacting with chatbots</h2>
-      </section>
-      <section class="information">
-        <div class="info-1 info">
-          <div class="img-container">
-            <img class="img-lg" src="./chatbot1.jpeg" alt="person and chatbot facing each other">
-          </div>
-          <h3>People enjoy using chatbots for simple requests</h3>
+      </div>
+      <div class="info-3 info">
+        <div class="img-container">
+          <img class="img-lg" src="./chatbot3.jpeg" alt="chatbot talking to you">
+        </div>
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
+      </div>
+    </section>
+    <!-- First multiple choice -->
+    <section class="multiple-choice">
+      <div id="q1" class="question-answer-container">
+        <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
+        <button id="q1a">A. This is the right answer</button>
+        <button id="q1b">B. This is the wrong answer</button>
+        <button id="q1c">C. This is the wrong answer</button>
+        <button id="q1d">D. This is the wrong answer</button>
+      </div>
+    </section>
+    <!-- Section 3 -->
+    <section class="customer-title">
+      <h2>Potential Privacy Concerns with Chatbots</h2>
+    </section>
+    <section class="information-2">
+      <div id="arrow3"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
+      <div class="info-4">
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <div class="info-4-main">
+          <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
           <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
         </div>
-        <div class="info-2 info">
-          <h3 style="margin-top: 0;">People enjoy using chatbots for simple requests</h3>
-          <p style="margin-bottom: 0;">Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-          <div class="img-container" style="padding-top: 2rem;">
-            <img class="img-lg" src="./chatbot2.jpeg" alt="chatbot with lightbulb">
-          </div>
-        </div>
-        <div class="info-3 info">
-          <div class="img-container">
-            <img class="img-lg" src="./chatbot3.jpeg" alt="chatbot talking to you">
-          </div>
-          <h3>People enjoy using chatbots for simple requests</h3>
+      </div>
+      <div class="img-container info-5">
+        <img class="img-xl" src="./chatbot4.png" alt="">
+      </div>
+    </section>
+    <!-- Section 4 -->
+    <section class="customer-title">
+      <h2>Potential Privacy Concerns with Chatbots</h2>
+    </section>
+    <section class="information-2 information-3">
+      <div id="arrow4"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
+      <div class="img-container info-5">
+        <img class="img-xl" src="./chatbot5.png" alt="">
+      </div>
+      <div class="info-4 info-4-bottom">
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <div class="info-4-main">
+          <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
           <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
         </div>
-      </section>
-      <!-- Section 3 -->
-      <section class="customer-title">
-        <h2>Potential Privacy Concerns with Chatbots</h2>
-      </section>
-      <section class="information-2">
-        <div id="arrow3"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
-        <div class="info-4">
-          <h3>People enjoy using chatbots for simple requests</h3>
-          <div class="info-4-main">
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-          </div>
-        </div>
-        <div class="img-container info-5">
-          <img class="img-xl" src="./chatbot4.png" alt="">
-        </div>
-      </section>
-      <!-- Section 4 -->
-      <section class="customer-title">
-        <h2>Potential Privacy Concerns with Chatbots</h2>
-      </section>
-      <section class="information-2 information-3">
-        <div id="arrow4"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
-        <div class="img-container info-5">
-          <img class="img-xl" src="./chatbot5.png" alt="">
-        </div>
-        <div class="info-4 info-4-bottom">
-          <h3>People enjoy using chatbots for simple requests</h3>
-          <div class="info-4-main">
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
+    <!-- Second multiple choice -->
+    <section class="multiple-choice">
+      <div id="q2" class="question-answer-container">
+        <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
+        <button id="q2a">A. This is the wrong answer</button>
+        <button id="q2b">B. This is the wrong answer</button>
+        <button id="q2c">C. This is the right answer</button>
+        <button id="q2d">D. This is the wrong answer</button>
+      </div>
+    </section>
   </div>
 
   <!-- Law-Maker Section -->
   <div id="law-maker-content">
     <!-- Section 1 -->
-      <section class="customer-title">
-        <h2>So you’re a law-maker who's interested in chatbot law...</h2>
-      </section>
-      <section id="customer-contents">
-        <div class="contents-img">
-          <img src="./customer.png" alt="picture of customer">
+    <section class="customer-title">
+      <h2>So you’re a law-maker who's interested in chatbot law...</h2>
+    </section>
+    <section id="customer-contents">
+      <div class="contents-img">
+        <img src="./customer.png" alt="picture of customer">
+      </div>
+      <div class="contents-links">
+        <div id="arrow2"><i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
+        <div class="links-container">
+          <h3 class="contents-title">Here's what well talk about:</h3>
+          <ol>
+            <li><a class="link" href="">Part 1</a></li>
+            <li><a class="link" href="">Part 2</a></li>
+            <li><a class="link" href="">Part 3</a></li>
+            <li><a class="link" href="">Part 4</a></li>
+            <li><a class="link" href="">Part 5</a></li>
+          </ol>
+        </div>    
+      </div>
+    </section>
+    <!-- Section 2 -->
+    <section class="customer-title">
+      <h2>How users feel about their experiences interacting with chatbots</h2>
+    </section>
+    <section class="information">
+      <div class="info-1 info">
+        <div class="img-container">
+          <img class="img-lg" src="./chatbot1.jpeg" alt="person and chatbot facing each other">
         </div>
-        <div class="contents-links">
-          <div id="arrow2"><i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
-          <div class="links-container">
-            <h3 class="contents-title">Here's what well talk about:</h3>
-            <ol>
-              <li><a class="link" href="">Part 1</a></li>
-              <li><a class="link" href="">Part 2</a></li>
-              <li><a class="link" href="">Part 3</a></li>
-              <li><a class="link" href="">Part 4</a></li>
-              <li><a class="link" href="">Part 5</a></li>
-            </ol>
-          </div>    
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
+      </div>
+      <div class="info-2 info">
+        <h3 style="margin-top: 0;">People enjoy using chatbots for simple requests</h3>
+        <p style="margin-bottom: 0;">Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
+        <div class="img-container" style="padding-top: 2rem;">
+          <img class="img-lg" src="./chatbot2.jpeg" alt="chatbot with lightbulb">
         </div>
-      </section>
-      <!-- Section 2 -->
-      <section class="customer-title">
-        <h2>How users feel about their experiences interacting with chatbots</h2>
-      </section>
-      <section class="information">
-        <div class="info-1 info">
-          <div class="img-container">
-            <img class="img-lg" src="./chatbot1.jpeg" alt="person and chatbot facing each other">
-          </div>
-          <h3>People enjoy using chatbots for simple requests</h3>
+      </div>
+      <div class="info-3 info">
+        <div class="img-container">
+          <img class="img-lg" src="./chatbot3.jpeg" alt="chatbot talking to you">
+        </div>
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
+      </div>
+    </section>
+    <!-- First multiple choice -->
+    <section class="multiple-choice">
+      <div id="q1" class="question-answer-container">
+        <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
+        <button id="q1a">A. This is the right answer</button>
+        <button id="q1b">B. This is the wrong answer</button>
+        <button id="q1c">C. This is the wrong answer</button>
+        <button id="q1d">D. This is the wrong answer</button>
+      </div>
+    </section>
+    <!-- Section 3 -->
+    <section class="customer-title">
+      <h2>Potential Privacy Concerns with Chatbots</h2>
+    </section>
+    <section class="information-2">
+      <div id="arrow3"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
+      <div class="info-4">
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <div class="info-4-main">
+          <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
           <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
         </div>
-        <div class="info-2 info">
-          <h3 style="margin-top: 0;">People enjoy using chatbots for simple requests</h3>
-          <p style="margin-bottom: 0;">Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-          <div class="img-container" style="padding-top: 2rem;">
-            <img class="img-lg" src="./chatbot2.jpeg" alt="chatbot with lightbulb">
-          </div>
-        </div>
-        <div class="info-3 info">
-          <div class="img-container">
-            <img class="img-lg" src="./chatbot3.jpeg" alt="chatbot talking to you">
-          </div>
-          <h3>People enjoy using chatbots for simple requests</h3>
+      </div>
+      <div class="img-container info-5">
+        <img class="img-xl" src="./chatbot4.png" alt="">
+      </div>
+    </section>
+    <!-- Section 4 -->
+    <section class="customer-title">
+      <h2>Potential Privacy Concerns with Chatbots</h2>
+    </section>
+    <section class="information-2 information-3">
+      <div id="arrow4"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
+      <div class="img-container info-5">
+        <img class="img-xl" src="./chatbot5.png" alt="">
+      </div>
+      <div class="info-4 info-4-bottom">
+        <h3>People enjoy using chatbots for simple requests</h3>
+        <div class="info-4-main">
+          <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
           <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
         </div>
-      </section>
-      <!-- Section 3 -->
-      <section class="customer-title">
-        <h2>Potential Privacy Concerns with Chatbots</h2>
-      </section>
-      <section class="information-2">
-        <div id="arrow3"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
-        <div class="info-4">
-          <h3>People enjoy using chatbots for simple requests</h3>
-          <div class="info-4-main">
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-          </div>
-        </div>
-        <div class="img-container info-5">
-          <img class="img-xl" src="./chatbot4.png" alt="">
-        </div>
-      </section>
-      <!-- Section 4 -->
-      <section class="customer-title">
-        <h2>Potential Privacy Concerns with Chatbots</h2>
-      </section>
-      <section class="information-2 information-3">
-        <div id="arrow4"<i class="fa fa-arrow-down" aria-hidden="true" style="color: white"></i></div>
-        <div class="img-container info-5">
-          <img class="img-xl" src="./chatbot5.png" alt="">
-        </div>
-        <div class="info-4 info-4-bottom">
-          <h3>People enjoy using chatbots for simple requests</h3>
-          <div class="info-4-main">
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-            <p>Customers are inherently busy people. As a result of more purchases being made online, consumers are interacting with chatbots at much higher rates. Some experiences are better than others and sometimes chatbots fail to deliver. Research suggests that most consumers are happy to use chatbots for simple requests. Gone are the days where waiting on hold for extended periods of time was expected. Company chatbots are here to save the day! Or at least we’d like to hope so...</p>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
+    <!-- Second multiple choice -->
+    <section class="multiple-choice">
+      <div id="q2" class="question-answer-container">
+        <p class="multiple-choice-question">This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.This is a question that relates to the section immediately above.</p>
+        <button id="q2a">A. This is the wrong answer</button>
+        <button id="q2b">B. This is the wrong answer</button>
+        <button id="q2c">C. This is the right answer</button>
+        <button id="q2d">D. This is the wrong answer</button>
+      </div>
+    </section>
   </div>
 
   <!-- Chatbot section -->
