@@ -1,44 +1,56 @@
 document.getElementById('year').innerHTML = new Date().getFullYear();
 
-const userButton = document.getElementById('user-button');
-const businessButton = document.getElementById('business-button');
-const lawMakerButton = document.getElementById('law-maker-button');
+const userButton = document.getElementsByClassName('user-button');
+const businessButton = document.getElementsByClassName('business-button');
+const lawMakerButton = document.getElementsByClassName('law-maker-button');
 
 const customerContent = document.getElementById('customer-content');
 const businessContent = document.getElementById('business-content');
 const lawMakerContent = document.getElementById('law-maker-content');
 
-userButton.style.backgroundColor = 'grey';
+for (let i = 0; i < userButton.length; i++) {
+  userButton[i].classList.add('selected');
+}
 customerContent.style.display = 'block';
 businessContent.style.display = 'none';
 lawMakerContent.style.display = 'none';
 
 function showCustomerContent() {
-  userButton.style.backgroundColor = 'grey';
-  businessButton.style.backgroundColor = 'black';
-  lawMakerButton.style.backgroundColor = 'black';
+  for (let i = 0; i < userButton.length; i++) {
+    userButton[i].style.backgroundColor = 'grey';
+    businessButton[i].style.backgroundColor = 'black';
+    lawMakerButton[i].style.backgroundColor = 'black';
+  }
   customerContent.style.display = 'block';
   businessContent.style.display = 'none';
   lawMakerContent.style.display = 'none';
 };
 
 function showBusinessContent() {
-  userButton.style.backgroundColor = 'black';
-  businessButton.style.backgroundColor = 'grey';
-  lawMakerButton.style.backgroundColor = 'black';
+  for (let i = 0; i < userButton.length; i++) {
+    userButton[i].style.backgroundColor = 'black';
+    businessButton[i].style.backgroundColor = 'grey';
+    lawMakerButton[i].style.backgroundColor = 'black';
+  }
   customerContent.style.display = 'none';
   businessContent.style.display = 'block';
   lawMakerContent.style.display = 'none';
 };
 
 function showLawMakerContent() {
-  userButton.style.backgroundColor = 'black';
-  businessButton.style.backgroundColor = 'black';
-  lawMakerButton.style.backgroundColor = 'grey';
+  for (let i = 0; i < userButton.length; i++) {
+    userButton[i].style.backgroundColor = 'black';
+    businessButton[i].style.backgroundColor = 'black';
+    lawMakerButton[i].style.backgroundColor = 'grey';
+  }
   customerContent.style.display = 'none';
   businessContent.style.display = 'none';
   lawMakerContent.style.display = 'block';
 };
+
+function scrollToTop() {
+  document.body.scrollIntoView({ behavior: 'smooth' });
+}
 
 // Questions
 function answer(q, but, ans) {
