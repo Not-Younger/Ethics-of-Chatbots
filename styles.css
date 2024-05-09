@@ -511,6 +511,10 @@ footer p {
   text-align: left;
 }
 
+.multiple-choice-question {
+  font-size: 1.5rem;
+}
+
 .right-answer {
   background-color: green;
 }
