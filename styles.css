@@ -1,6 +1,8 @@
 html {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -215,6 +217,7 @@ img {
 
 .links-container h3 {
   margin: 0;
+  padding-bottom: 2rem;
 }
 
 ol li {
@@ -280,13 +283,11 @@ ol li {
 }
 
 .info-1 {
-  border-right: 1px solid black;
   padding: 2rem;
   flex: 1;
 }
 
 .info-2 {
-  border-right: 1px solid black;
   padding: 2rem;
   flex: 1;
 }
@@ -388,6 +389,7 @@ ol li {
 
 .chatbot-container {
   width: 60%;
+  max-width: 800px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 2rem;
@@ -432,21 +434,21 @@ ol li {
 
 .input-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 2rem;
-  gap: .3rem;
-  width: 80%;
+  width: 100%;
+  gap: 1rem;
 }
 
 #user-message {
-  width: 80%;
+  flex: 7;
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 5px;
 }
 
 #chatbot-button {
+  flex: 1;
   padding: 0.5rem 1rem;
   background-color: #000;
   font-size: 1rem;
@@ -525,7 +527,11 @@ footer p {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 2rem 0 0 0;
+}
+
+.bottom-user-type-container button {
+  width: max-content;
 }
 
 @media (max-width: 500px) {
@@ -539,6 +545,12 @@ footer p {
   .bottom-user-type-container {
     flex-direction: column;
     gap: 1rem;
+  }
+  .bottom-user-type-container button {
+    width: 100%;
+  }
+  .chatbot-container {
+    width: 80%;
   }
 }
 @media (max-width: 700px) {
@@ -597,6 +609,16 @@ footer p {
   .info-4-bottom {
     border-left: 0;
   }
+  .input-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .chatbot-section {
+    padding: 2rem 1rem;
+  }
+  .chatbot-container {
+    padding: 1rem;
+  }
 }
 @media (max-width: 1000px) {
   .info-4-main {
@@ -605,6 +627,9 @@ footer p {
   }
   .info-4 {
     flex: 1;
+  }
+  #arrow2 {
+    bottom: -29px;
   }
 }
 @media (max-width: 1200px) {
