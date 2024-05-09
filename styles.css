@@ -118,6 +118,7 @@ h2 {
   border: none;
   border-radius: 5px;
   cursor: pointer; 
+  width: 100%;
 }
 
 #arrow1 {
@@ -530,10 +531,6 @@ footer p {
   padding: 2rem 0 0 0;
 }
 
-.bottom-user-type-container button {
-  width: max-content;
-}
-
 @media (max-width: 500px) {
   h1 {
     font-size: 3.5rem;
@@ -547,7 +544,7 @@ footer p {
     gap: 1rem;
   }
   .bottom-user-type-container button {
-    width: 100%;
+    width: 150px;
   }
   .chatbot-container {
     width: 80%;
