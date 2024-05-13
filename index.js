@@ -96,11 +96,10 @@ function fetchChatbotResponse() {
     role: 'user',
     content: userMessage
   });
-  fetch('https://api.openai.com/v1/chat/completions', {
+  fetch('https://d0b8-2600-6c46-7900-19e-00-1dac.ngrok-free.app/forward', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer $OPENAI_API_KEY'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
@@ -110,7 +109,7 @@ function fetchChatbotResponse() {
     .then(response => response.json())
     .then(data => {
       const chatbotResponse = data.choices[0].message.content;
-      
+      console.log(chatbotResponse);
       session.messages.push(data.choices[0].message);
       var chatbotSpan = document.createElement('span');
       chatbotSpan.className = 'chatbot-response';

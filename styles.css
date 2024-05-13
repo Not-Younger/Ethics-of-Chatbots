@@ -456,7 +456,22 @@ ol li {
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer; 
+  cursor: pointer;
+}
+
+#mobile-chatbot-button {
+  display: none;
+  background-image: url('send-icon.png');
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #2E81FF;
+  cursor: pointer;
+  outline: none;
 }
 
 
@@ -610,9 +625,11 @@ footer p {
   .info-4-bottom {
     border-left: 0;
   }
-  .input-container {
-    width: 100%;
-    flex-direction: column;
+  #chatbot-button {
+    display: none;
+  }
+  #mobile-chatbot-button {
+    display: block;
   }
   .chatbot-section {
     padding: 2rem 1rem;
