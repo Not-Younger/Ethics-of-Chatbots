@@ -1,8 +1,21 @@
+:root {
+  --main-bg-color: white;
+  --main-color: black;
+  --button-bg-color: grey;
+}
+
 html {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+}
+
+html.dark-theme {
+  --main-bg-color: black;
+  --main-color: white;
 }
 
 body {
@@ -12,15 +25,16 @@ body {
 
 nav {
   max-width: 100vw;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  gap: 2rem;
 }
 
 .left {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--main-color);
   padding-left: 0.5rem;
 }
 
@@ -30,8 +44,10 @@ nav {
 
 .right {
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
-  gap: 2rem;
+  justify-content: right;
+  gap: 0.5rem;
 }
 
 .social-container {
@@ -40,11 +56,11 @@ nav {
   align-items: center;
 }
 
-.contact-button {
+#contact-button {
   padding: 0.5rem 1rem;
-  background-color: #000;
+  background-color: var(--main-color);
   font-size: 1rem;
-  color: #fff;
+  color: var(--main-bg-color);
   border: none;
   border-radius: 5px;
   width: max-content;
@@ -53,7 +69,7 @@ nav {
 
 #hero-section {
   padding: 2rem 2rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
 }
 
 h1 {
@@ -72,7 +88,7 @@ h1 {
 .introduction {
   padding: 1rem 2rem 1rem 0;
   flex: 2.5;
-  border-right: 1px solid black;
+  border-right: 1px solid var(--main-color);
 }
 
 .introduction p {
@@ -112,9 +128,9 @@ h2 {
 
 .user-type-button {
   padding: 0.5rem 1rem;
-  background-color: #000;
+  background-color: var(--main-color);
   font-size: 1rem;
-  color: #fff;
+  color: var(--main-bg-color);
   border: none;
   border-radius: 5px;
   cursor: pointer; 
@@ -136,8 +152,8 @@ h2 {
 
 #general-section {
   padding: 2rem;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
 
 #general-upper {
@@ -152,7 +168,7 @@ h2 {
 }
 
 .definition {
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
   border-radius: 5px;
   width: 60%;
   padding: 1rem;
@@ -195,7 +211,7 @@ img {
 #customer-contents {
   display: flex;
   padding: 0 0 0 2rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
 }
 
 .contents-img {
@@ -208,7 +224,7 @@ img {
 
 .contents-links {
   flex: 3;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--main-color);
   display: flex;
   justify-content: left;
   align-items: center;
@@ -233,7 +249,7 @@ ol li {
 
 .link {
   text-decoration: none;
-  color: black;
+  color: var(--main-color);
   cursor: pointer;
 }
 
@@ -256,7 +272,7 @@ ol li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
 }
 
 .customer-title h2 {
@@ -271,7 +287,7 @@ ol li {
 }
 
 .info {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
 }
 
 .info p {
@@ -316,8 +332,8 @@ ol li {
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
 }
 
 .info-4 h3 {
@@ -352,7 +368,7 @@ ol li {
 
 .info-5 {
   flex: 1;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
   padding: 2rem 0;
 }
 
@@ -375,7 +391,7 @@ ol li {
 
 .info-4-bottom {
   border-right: 0;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--main-color);
 }
 
 .chatbot-section {
@@ -385,13 +401,13 @@ ol li {
   align-items: center;
   padding: 3rem;
   position: relative;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
 }
 
 .chatbot-container {
   width: 60%;
   max-width: 800px;
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
   border-radius: 5px;
   padding: 2rem;
   display: flex;
@@ -444,16 +460,16 @@ ol li {
 #user-message {
   flex: 7;
   padding: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
   border-radius: 5px;
 }
 
 #chatbot-button {
   flex: 1;
   padding: 0.5rem 1rem;
-  background-color: #000;
+  background-color: var(--main-color);
   font-size: 1rem;
-  color: #fff;
+  color: var(--main-bg-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -504,7 +520,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-color);
   padding: 2rem;
 }
 
@@ -517,9 +533,9 @@ footer p {
 
 .multiple-choice-button {
   padding: 0.5rem 1rem;
-  background-color: #000;
+  background-color: var(--main-color);
   font-size: 1rem;
-  color: #fff;
+  color: var(--main-bg-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -548,6 +564,17 @@ footer p {
   align-items: center;
   gap: 2rem;
   padding: 2rem 0 0 0;
+}
+
+#mode {
+  padding: 0.5rem 1rem;
+  background-color: var(--main-color);
+  font-size: 1rem;
+  color: var(--main-bg-color);
+  border: none;
+  border-radius: 5px;
+  width: max-content;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -580,7 +607,7 @@ footer p {
   }
   .introduction {
     border-right: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--main-color);
     padding: 0 2rem;
   }
   .introduction p {
@@ -600,7 +627,7 @@ footer p {
   }
   .contents-links {
     border-left: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--main-color);
   }
   .contents-img {
     padding: 0;
