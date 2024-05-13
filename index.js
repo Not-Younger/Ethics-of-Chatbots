@@ -126,7 +126,7 @@ function fetchChatbotResponse() {
     role: 'user',
     content: userMessage
   });
-  fetch('https://d0b8-2600-6c46-7900-19e-00-1dac.ngrok-free.app/forward', {
+  fetch('https://DavidSawires.pythonanywhere.com/forward', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
