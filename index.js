@@ -1,56 +1,86 @@
+var darkMode = false;
+var selected = 'user-button';
+
 document.getElementById('year').innerHTML = new Date().getFullYear();
 
-const userButton = document.getElementsByClassName('user-button');
-const businessButton = document.getElementsByClassName('business-button');
-const lawMakerButton = document.getElementsByClassName('law-maker-button');
+const userButtons = document.getElementsByClassName('user-button');
+const businessButtons = document.getElementsByClassName('business-button');
+const lawMakerButtons = document.getElementsByClassName('law-maker-button');
 
 const customerContent = document.getElementById('customer-content');
 const businessContent = document.getElementById('business-content');
 const lawMakerContent = document.getElementById('law-maker-content');
 
-for (let i = 0; i < userButton.length; i++) {
-  userButton[i].classList.add('selected');
+// Dark mode function
+function toggleDarkMode() {
+  darkMode = !darkMode;
+  if (darkMode) {
+    document.documentElement.classList.add('dark-theme');
+  } else {
+    document.documentElement.classList.remove('dark-theme');
+  }
+  if (selected == 'user-button') {
+    showCustomerContent();
+  }
+  else if (selected == 'business-button') {
+    showBusinessContent();
+  }
+  else {
+    showLawMakerContent();
+  }
+}
+
+// Initial state
+for (let i = 0; i < userButtons.length; i++) {
+  userButtons[i].classList.add('selected');
 }
 customerContent.style.display = 'block';
 businessContent.style.display = 'none';
 lawMakerContent.style.display = 'none';
 
+function resetButtons() {
+  for (let i = 0; i < userButtons.length; i++) {
+    userButtons[i].classList.remove('selected');
+    businessButtons[i].classList.remove('selected');
+    lawMakerButtons[i].classList.remove('selected');
+  } 
+}
+
 function showCustomerContent() {
-  for (let i = 0; i < userButton.length; i++) {
-    userButton[i].style.backgroundColor = 'grey';
-    businessButton[i].style.backgroundColor = 'black';
-    lawMakerButton[i].style.backgroundColor = 'black';
-  }
   customerContent.style.display = 'block';
   businessContent.style.display = 'none';
   lawMakerContent.style.display = 'none';
+
+  resetButtons();
+  selected = 'user-button';
+  for (let i = 0; i < userButtons.length; i++) {
+    userButtons[i].classList.add('selected');
+  }
 };
 
 function showBusinessContent() {
-  for (let i = 0; i < userButton.length; i++) {
-    userButton[i].style.backgroundColor = 'black';
-    businessButton[i].style.backgroundColor = 'grey';
-    lawMakerButton[i].style.backgroundColor = 'black';
-  }
   customerContent.style.display = 'none';
   businessContent.style.display = 'block';
   lawMakerContent.style.display = 'none';
+
+  resetButtons();
+  selected = 'business-button';
+  for (let i = 0; i < businessButtons.length; i++) {
+    businessButtons[i].classList.add('selected');
+  }
 };
 
 function showLawMakerContent() {
-  for (let i = 0; i < userButton.length; i++) {
-    userButton[i].style.backgroundColor = 'black';
-    businessButton[i].style.backgroundColor = 'black';
-    lawMakerButton[i].style.backgroundColor = 'grey';
-  }
   customerContent.style.display = 'none';
   businessContent.style.display = 'none';
   lawMakerContent.style.display = 'block';
-};
 
-function scrollToTop() {
-  document.body.scrollIntoView({ behavior: 'smooth' });
-}
+  resetButtons();
+  selected = 'law-maker-button';
+  for (let i = 0; i < lawMakerButtons.length; i++) {
+    lawMakerButtons[i].classList.add('selected');
+  }
+};
 
 // Questions
 function answer(q, but, ans) {
