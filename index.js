@@ -122,6 +122,7 @@ function fetchChatbotResponse() {
   userSpan.className = 'user-response';
   userSpan.textContent = userMessage;
   chatbotBody.appendChild(userSpan);
+  chatbotBody.scrollTop = chatbotBody.scrollHeight;
   session.messages.push({
     role: 'user',
     content: userMessage
