@@ -140,11 +140,9 @@ function fetchChatbotResponse() {
     .then(response => response.json())
     .then(data => {
       const chatbotResponse = data.choices[0].message.content;
-      console.log(chatbotResponse);
       session.messages.push(data.choices[0].message);
       var chatbotSpan = document.createElement('span');
       chatbotSpan.className = 'chatbot-response';
-      console.log(session.messages);
       chatbotSpan.textContent = chatbotResponse;
       chatbotBody.appendChild(chatbotSpan);
       chatbotBody.scrollTop = chatbotBody.scrollHeight;
