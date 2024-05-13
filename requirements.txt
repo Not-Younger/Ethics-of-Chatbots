@@ -3,48 +3,50 @@ David Sawires
 
 Project Requirements Completion
 
-	We have met all of the requirements for part 3 of the project. Our website is easy to use and doesn’t 
-require any additional information to understand how to navigate it. Users will land on the same page 
-where they will be met with a question asking what kind of user they identify with. They have three 
-self-explanatory options. The option they choose will determine the content they are given and the page 
-will automatically scroll to the start of the content so users don’t need to look for it on their own. 
-Each user information section starts with a table of contents that provides links that skip to certain 
-sections of the page. They also have the choice of just reading from top to bottom (recommended). Each 
-section is outlined with a title and subtitles with paragraphs of information. Each user section also 
-has two multiple-choice questions that go along with the content to break up the reading. At the end of 
-each section, users are met with a chatbot they can interact with which has a familiar setup to texting 
-and other AI models such as ChatGPT. 
+	We have met all of the requirements for part 3 of the project. Our website is easy to use and
+doesn’t require any additional information to understand how to navigate it. Users will land on the same 
+page where they will respond to a prompt asking to identify what type of user they are. They have three 
+self-explanatory options. The option they choose will determine the content they are provided and the 
+page will automatically scroll to the start of the content so users don’t need to look for it on their own. Each 
+user information section starts with a table of contents that provides links that skip to certain sections of 
+the page. They also have the choice of just reading from top to bottom (recommended). Each section is 
+outlined with a title and subtitles with paragraphs of information. Each user section also has two 
+multiple-choice questions that go along with the content to break up the reading. At the end of each 
+section, users are met with a chatbot they can interact with which has a familiar setup to texting and other 
+AI models such as ChatGPT.
 
-	The informational content for each section is adequate at giving people a general idea of the landscape 
-that is AI chatbots based on their user preferences. If they are a consumer, they are informed about what 
-a chatbot is, the different types, why they are useful, how consumers typically interact with them, and 
-how they can prevent sharing sensitive information. Businesses will read more about the benefits of 
-integrating their own chatbots into their websites and the various considerations to take into account. 
-Finally, lawmakers will be filled in on the current cases that exist where consumers were misled or 
-provided false information from company chatbots and the results of those legal cases. We want people to 
-come to our website to become familiarized with chatbots so that they can make more informed decisions 
-regarding them in the future.
+	The informational content for each section is adequate at giving people a general idea of the 
+landscape that is AI chatbots based on their user preferences. If they are a consumer, they are informed 
+about what a chatbot is, the different types, why they are useful, how consumers typically interact with 
+them, and how they can prevent sharing sensitive information. Businesses will read more about the 
+benefits of integrating their own chatbots into their websites and the various considerations to take into 
+account. Finally, lawmakers will be filled in on the current cases that exist where consumers were misled 
+or provided false information from company chatbots and the results of those legal cases. We want people 
+to come to our website to become familiarized with chatbots so that they can make more informed 
+decisions regarding them in the future.
 
 	Our website is far more than just a static website. We incorporated all sorts of interactivity such as 
 buttons that change the content display, light-dark mode, multiple choice questions, and even an 
 integrated chatbot where users can interact with a live chatbot similar to what they would find on any 
-business website. The multiple-choice sections served as a fun little information check for readers 
-where they could put their newfound knowledge to work. These were the main sorts of interactivity that 
-made sense for a website like the one we designed with the information we were presenting.
+business website. The multiple-choice sections served as a fun little information check for readers where 
+they could put their newfound knowledge to work. These were the main sorts of interactivity that made 
+sense for a website like the one we designed with the information we were presenting.
 
-	Our website has a simple, yet aesthetically pleasing design. We wanted a website that didn’t overdo the 
-visuals because we wanted the main focus to be the content and information we were trying to get across. 
-I think our design meets these requirements extremely well. Headers are correctly sized and the overall 
-spacing on the website is visually pleasing. It’s not too cramped or too spread out. Our website design 
-is also completely mobile-friendly and looks professional on any screen size from mobile, to tablet, to 
-desktop. The design is also intended to make the reading process more enjoyable. Instead of just reading 
-a wall of text, we wanted a sort of flowing motion from top to bottom so users aren’t always reading text 
-on one part of the page.
+	Our website has a simple, yet aesthetically pleasing design. We wanted a website that didn’t 
+overdo the visuals because we wanted the main focus to be the content and information we were trying to 
+get across. I think our design meets these requirements extremely well. Headers are correctly sized and 
+the overall spacing on the website is visually pleasing. It’s not too cramped or too spread out. Our website 
+design is also completely mobile-friendly and looks professional on any screen size from mobile, to tablet, 
+to desktop. The design is also intended to make the reading process more enjoyable. Instead of just 
+reading a wall of text, we wanted a sort of flowing motion from top to bottom so users aren’t always 
+reading text on one part of the page.
 
 	In terms of extra credit, one thing that took a long time to get just right was the responsiveness of 
-the website. It required a lot of media queries in CSS and a little JavaScript, but in the end, it worked 
-well. Regardless of the screen size you have on a device, you will get a beautiful layout that provides 
-a good user experience.
+the website. It required a lot of media queries in CSS and a little JavaScript, but in the end, it worked well. 
+Regardless of the screen size you have on a device, you will get a beautiful layout that provides a good 
+user experience. Moreover, we integrated API endpoints in order to provide the users with the ability to 
+chat with an actual chatbot, which took a bit of creativity since we were only allowed to use CSS, HTML 
+and JavaScript.
 
 Thank you!
 
