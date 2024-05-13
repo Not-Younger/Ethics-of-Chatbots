@@ -146,6 +146,7 @@ function fetchChatbotResponse() {
       console.log(session.messages);
       chatbotSpan.textContent = chatbotResponse;
       chatbotBody.appendChild(chatbotSpan);
+      chatbotBody.scrollTop = chatbotBody.scrollHeight;
     })
     .catch(error => {
       console.error('Error:', error);
